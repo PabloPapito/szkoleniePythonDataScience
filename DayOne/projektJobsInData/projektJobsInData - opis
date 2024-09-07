@@ -1,4 +1,5 @@
 Projekt praktyczny (dzień 1): Podstawowa analiza wynagrodzeń w branży danych
+
 Opis projektu:
 Celem projektu jest zastosowanie wiedzy zdobytej w trakcie pierwszego dnia szkolenia do wstępnej analizy danych dotyczących wynagrodzeń w branży danych.
 Uczestnicy będą pracować z danymi z pliku CSV, przeprowadzać podstawowe operacje, obliczenia statystyczne oraz analizę rozkładu wynagrodzeń za pomocą wykresów.
@@ -6,30 +7,30 @@ Uczestnicy będą pracować z danymi z pliku CSV, przeprowadzać podstawowe oper
 Kroki projektu:
 1. Wczytanie pliku CSV do Jupyter Notebook
 Zadanie: Wczytaj dane z pliku CSV do Jupyter Notebooka i wyświetl pierwsze 10 rekordów.
-Wskazówki: Użyj funkcji pd.read_csv() do wczytania danych i head() do wyświetlenia danych.
+  Wskazówki: Użyj funkcji pd.read_csv() do wczytania danych i head() do wyświetlenia danych.
 
 2. Obliczenia statystyczne
 Zadanie: Oblicz podstawowe statystyki dla kolumny salary_in_usd:
-Średnia, Mediana
-Wartość minimalna i maksymalna
-Odchylenie standardowe
-Kwartyle (Q1, Q2, Q3)
+  Średnia, Mediana
+  Wartość minimalna i maksymalna
+  Odchylenie standardowe
+  Kwartyle (Q1, Q2, Q3)
 Wskazówki: Użyj funkcji mean(), median(), min(), max(), std() oraz quantile().
 
 3. Indeksowanie, slicing i iteracja
 Zadanie: Za pomocą indeksowania i slicingu wyciągnij dane dla pierwszych 5 wierszy oraz kolumn job_title, salary_in_usd, experience_level.
-Wskazówki: Użyj indeksowania i loc oraz iloc do wyboru odpowiednich danych.
+  Wskazówki: Użyj indeksowania i loc oraz iloc do wyboru odpowiednich danych.
 Zadanie: Użyj pętli do iteracji po danych dla pierwszych 10 wierszy, aby wyświetlić wartości wynagrodzeń.
 
 4. Tworzenie funkcji do porównania wynagrodzeń
 Zadanie: Stwórz funkcję, która sprawdzi, czy wynagrodzenie danej osoby jest powyżej czy poniżej średniej.
-Wskazówki: Funkcja powinna przyjmować wartość wynagrodzenia i zwracać informację "Powyżej średniej" lub "Poniżej średniej".
+  Wskazówki: Funkcja powinna przyjmować wartość wynagrodzenia i zwracać informację "Powyżej średniej" lub "Poniżej średniej".
 
 5. Wizualizacja danych (podstawowe wykresy związane z miarami rozkładu)
 Zadanie: Stwórz histogram wynagrodzeń (salary_in_usd), aby zobaczyć rozkład płac.
-Wskazówki: Użyj matplotlib.pyplot oraz funkcji plt.hist() do stworzenia histogramu.
+  Wskazówki: Użyj matplotlib.pyplot oraz funkcji plt.hist() do stworzenia histogramu.
 Zadanie: Stwórz wykres słupkowy przedstawiający liczebność pracowników na różnych poziomach doświadczenia (experience_level).
-Wskazówki: Użyj funkcji plt.bar() i danych o poziomie doświadczenia.
+  Wskazówki: Użyj funkcji plt.bar() i danych o poziomie doświadczenia.
 
 6. Podsumowanie wyników
 Zadanie: Podsumuj swoje wyniki – ile wynagrodzeń jest powyżej średniej, ile poniżej. Opisz, jak wygląda rozkład wynagrodzeń na podstawie histogramu.
