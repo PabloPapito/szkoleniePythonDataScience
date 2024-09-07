@@ -18,9 +18,8 @@ Zadanie: Oblicz podstawowe statystyki dla kolumny salary_in_usd:
 Wskazówki: Użyj funkcji mean(), median(), min(), max(), std() oraz quantile().
 
 3. Indeksowanie, slicing i iteracja
-Zadanie: Za pomocą indeksowania i slicingu wyciągnij dane dla pierwszych 5 wierszy oraz kolumn job_title, salary_in_usd, experience_level.
-  Wskazówki: Użyj indeksowania i loc oraz iloc do wyboru odpowiednich danych.
-Zadanie: Użyj pętli do iteracji po danych dla pierwszych 10 wierszy, aby wyświetlić wartości wynagrodzeń.
+Zadanie: Użyj indeksowania i slicing za pomocą nawiasów kwadratowych, aby wyciągnąć dane dla pierwszych 5 wierszy oraz kolumn job_title, salary_in_usd, experience_level.
+Zadanie: Użyj pętli for, aby przejść przez pierwsze 10 wierszy i wyświetlić wartości wynagrodzeń (salary_in_usd).
 
 4. Tworzenie funkcji do porównania wynagrodzeń
 Zadanie: Stwórz funkcję, która sprawdzi, czy wynagrodzenie danej osoby jest powyżej czy poniżej średniej.
