@@ -1,35 +1,83 @@
-Projekt praktyczny (dzień 1): Podstawowa analiza wynagrodzeń w branży danych
+Projekt: Analiza wynagrodzeń w branży danych – zgodny z wiedzą z pierwszego dnia
+Cel projektu:
+Celem projektu jest przeprowadzenie szczegółowej analizy wynagrodzeń w branży danych, w oparciu o wiedzę zdobytą podczas pierwszego dnia szkolenia.
+Analiza obejmuje czynniki wpływające na wynagrodzenia, takie jak poziom doświadczenia, lokalizacja oraz wielkość firmy.
+W trakcie realizacji projektu uczestnicy będą korzystać z podstawowych narzędzi Pythona, takich jak pętle, funkcje, indeksowanie i slicing, a także zastosują proste techniki wizualizacji danych.
 
-Opis projektu:
-Celem projektu jest zastosowanie wiedzy zdobytej w trakcie pierwszego dnia szkolenia do wstępnej analizy danych dotyczących wynagrodzeń w branży danych.
-Uczestnicy będą pracować z danymi z pliku CSV, przeprowadzać podstawowe operacje, obliczenia statystyczne oraz analizę rozkładu wynagrodzeń za pomocą wykresów.
+Założenia:
+Projekt opiera się na pliku CSV zawierającym informacje o wynagrodzeniach w branży danych. Kluczowe zmienne, które będziemy analizować, to:
+
+salary_in_usd: Wynagrodzenie w USD.
+experience_level: Poziom doświadczenia (np. Junior, Senior).
+employee_residence: Lokalizacja pracownika.
+company_size: Wielkość firmy (mała, średnia, duża).
+job_title: Stanowisko.
 
 Kroki projektu:
-1. Wczytanie pliku CSV do Jupyter Notebook
-Zadanie: Wczytaj dane z pliku CSV do Jupyter Notebooka i wyświetl pierwsze 10 rekordów.
-  Wskazówki: Użyj funkcji pd.read_csv() do wczytania danych i head() do wyświetlenia danych.
+1. Wczytanie danych i wstępna analiza
+  Zadanie: Wczytaj dane z pliku CSV i przeanalizuj podstawowe informacje o strukturze danych.
 
-2. Obliczenia statystyczne
-Zadanie: Oblicz podstawowe statystyki dla kolumny salary_in_usd:
-  Średnia, Mediana
-  Wartość minimalna i maksymalna
-  Odchylenie standardowe
-  Kwartyle (Q1, Q2, Q3)
-Wskazówki: Użyj funkcji mean(), median(), min(), max(), std() oraz quantile().
+  Wskazówki:
 
-3. Indeksowanie, slicing i iteracja
-Zadanie: Użyj indeksowania i slicing za pomocą nawiasów kwadratowych, aby wyciągnąć dane dla pierwszych 5 wierszy oraz kolumn job_title, salary_in_usd, experience_level.
-Zadanie: Użyj pętli for, aby przejść przez pierwsze 10 wierszy i wyświetlić wartości wynagrodzeń (salary_in_usd).
+    - Użyj funkcji pd.read_csv() do wczytania danych.
+    - Wyświetl podstawowe informacje o danych za pomocą info(), describe() i head(), aby lepiej zrozumieć dane.
+    - Sprawdź dostępne kolumny, używając data.columns.
 
-4. Tworzenie funkcji do porównania wynagrodzeń
-Zadanie: Stwórz funkcję, która sprawdzi, czy wynagrodzenie danej osoby jest powyżej czy poniżej średniej.
-  Wskazówki: Funkcja powinna przyjmować wartość wynagrodzenia i zwracać informację "Powyżej średniej" lub "Poniżej średniej".
+2. Obliczenia statystyczne dla kolumny wynagrodzeń
+Zadanie: Oblicz podstawowe statystyki dla wynagrodzeń w kolumnie salary_in_usd, takie jak średnia, mediana, wartość minimalna, maksymalna oraz odchylenie standardowe.
 
-5. Wizualizacja danych (podstawowe wykresy związane z miarami rozkładu)
-Zadanie: Stwórz histogram wynagrodzeń (salary_in_usd), aby zobaczyć rozkład płac.
-  Wskazówki: Użyj matplotlib.pyplot oraz funkcji plt.hist() do stworzenia histogramu.
-Zadanie: Stwórz wykres słupkowy przedstawiający liczebność pracowników na różnych poziomach doświadczenia (experience_level).
-  Wskazówki: Użyj funkcji plt.bar() i danych o poziomie doświadczenia.
+  Wskazówki:
 
-6. Podsumowanie wyników
-Zadanie: Podsumuj swoje wyniki – ile wynagrodzeń jest powyżej średniej, ile poniżej. Opisz, jak wygląda rozkład wynagrodzeń na podstawie histogramu.
+    - Użyj funkcji wbudowanych, takich jak mean(), median(), min(), max() oraz std(), aby obliczyć te statystyki.
+    - Wyświetl liczbę rekordów za pomocą len(), aby sprawdzić, ile osób znajduje się w zbiorze danych.
+
+3. Przekształcanie danych i operacje tekstowe
+Zadanie: Zmodyfikuj dane tekstowe, zmieniając wszystkie nazwy stanowisk na wielkie litery, oraz oblicz długość nazw stanowisk.
+
+  Wskazówki:
+
+    - Użyj funkcji str.upper(), aby zmienić wszystkie nazwy stanowisk na wielkie litery.
+    - Aby obliczyć długość nazw stanowisk, skorzystaj z funkcji apply() i len(), które zastosujesz do kolumny job_title.
+
+4. Analiza wynagrodzeń w oparciu o poziom doświadczenia
+Zadanie: Oblicz średnie wynagrodzenie dla każdego poziomu doświadczenia, używając pętli oraz instrukcji warunkowych.
+
+  Wskazówki:
+  
+    - Skorzystaj z funkcji unique(), aby uzyskać listę poziomów doświadczenia.
+    - Użyj pętli for, aby przejść przez dane i zsumować wynagrodzenia dla każdej kategorii poziomu doświadczenia. Oblicz średnie, dzieląc sumę wynagrodzeń przez liczbę pracowników na danym poziomie.
+
+5. Analiza wynagrodzeń a lokalizacja firmy
+Zadanie: Przeanalizuj, jak lokalizacja pracownika wpływa na wynagrodzenia, używając pętli.
+
+  Wskazówki:
+  
+    - Użyj unique(), aby uzyskać listę lokalizacji.
+    - Podobnie jak w zadaniu dotyczącym poziomu doświadczenia, przejdź przez dane i oblicz średnie wynagrodzenie dla każdego kraju za pomocą pętli i instrukcji warunkowych.
+
+6. Wynagrodzenia w zależności od wielkości firmy
+Zadanie: Porównaj wynagrodzenia pracowników w zależności od wielkości firmy (company_size).
+
+  Wskazówki:
+  
+    - Wykorzystaj unique(), aby uzyskać listę unikalnych wielkości firm.
+    - Przejdź przez dane i oblicz średnie wynagrodzenie dla każdej wielkości firmy, używając pętli.
+
+7. Tworzenie funkcji porównującej wynagrodzenia z średnią
+Zadanie: Stwórz funkcję, która porówna wynagrodzenie danej osoby z średnią wynagrodzeń i wyświetli odpowiedni komunikat.
+
+  Wskazówki:
+  
+    - Stwórz funkcję compare_to_mean(), która będzie przyjmować dwa argumenty: wynagrodzenie i średnią.
+    - Użyj instrukcji if, aby porównać wartości, i zwróć tekst "Powyżej średniej" lub "Poniżej średniej".
+    - Zastosuj funkcję do każdej wartości w kolumnie salary_in_usd.
+
+8. Wizualizacja danych
+Zadanie: Stwórz histogram wynagrodzeń oraz wykres słupkowy, aby zobaczyć rozkład wynagrodzeń oraz liczebność pracowników na różnych poziomach doświadczenia.
+
+  Wskazówki:
+  
+    - Użyj funkcji plt.hist(), aby stworzyć histogram wynagrodzeń.
+    - Do stworzenia wykresu słupkowego dla poziomów doświadczenia skorzystaj z funkcji plt.bar() i danych z kolumny experience_level.
+    - Dodaj tytuł oraz etykiety osi za pomocą plt.title(), plt.xlabel() i plt.ylabel().
+    - Wywołaj plt.show(), aby wyświetlić wykresy.
