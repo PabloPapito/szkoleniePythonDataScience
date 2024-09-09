@@ -1,0 +1,93 @@
+Analiza wskaźników zdrowotnych – zgodny z wiedzą z drugiego dnia szkolenia
+
+Cel projektu:
+Celem projektu jest przeprowadzenie analizy danych zdrowotnych, takich jak wiek, poziom cholesterolu, poziom glukozy, BMI oraz ciśnienie krwi. Uczestnicy wykorzystają wiedzę zdobytą podczas drugiego dnia szkolenia, obejmującą zaawansowaną manipulację danymi, czyszczenie danych, przekształcanie kolumn, obliczanie statystyk oraz wizualizację wyników.
+
+Założenia:
+Projekt opiera się na pliku CSV zawierającym syntetyczne dane zdrowotne. Kluczowe zmienne, które będziemy analizować, to:
+
+Age (years): Wiek w latach.
+BMI: Wskaźnik masy ciała.
+Cholesterol Level (mg/dL): Poziom cholesterolu we krwi.
+Blood Glucose Level (mg/dL): Poziom glukozy we krwi.
+Blood Pressure (s/d): Ciśnienie skurczowe i rozkurczowe.
+
+Kroki projektu:
+1. Wczytanie danych i wstępna analiza
+  Zadanie: Wczytaj dane z pliku CSV i przeanalizuj ich strukturę oraz podstawowe informacje.
+
+  Wskazówki:
+
+    - Użyj funkcji pd.read_csv() do wczytania danych.
+    - Wyświetl informacje o danych za pomocą df.info(), df.describe(), df.head().
+
+2. Czyszczenie danych
+  Zadanie: Sprawdź, czy w danych występują brakujące wartości oraz duplikaty. Uzupełnij brakujące dane.
+
+  Wskazówki:
+
+    - Sprawdź brakujące wartości za pomocą df.isnull().sum().
+    - Uzupełnij brakujące dane, np. za pomocą średniej wartości, korzystając z funkcji fillna().
+    - Sprawdź, czy w danych występują duplikaty za pomocą df.duplicated().sum() i usuń je, jeśli to konieczne, za pomocą df.drop_duplicates().
+
+3. Rozdzielenie i konwersja kolumn
+  Zadanie: Rozdziel kolumnę ciśnienia krwi na dwie osobne kolumny: ciśnienie skurczowe i rozkurczowe, a następnie przekonwertuj je na liczby.
+
+  Wskazówki:
+
+    - Użyj str.split('/', expand=True) do rozdzielenia kolumny Blood Pressure (s/d).
+    - Konwertuj nowe kolumny na liczby za pomocą pd.to_numeric().
+
+4. Obliczanie statystyk
+  Zadanie: Oblicz podstawowe statystyki (średnia, mediana, minimum, maksimum, odchylenie standardowe) dla wskaźników zdrowotnych takich jak wiek, BMI, poziom cholesterolu i glukozy.
+
+  Wskazówki:
+
+    - Użyj funkcji takich jak mean(), median(), min(), max() oraz std() dla poszczególnych kolumn, aby obliczyć te statystyki.
+
+5. Grupowanie danych i analiza
+  Zadanie: Podziel osoby na grupy wiekowe i oblicz średnie wartości wskaźników zdrowotnych dla każdej grupy.
+
+  Wskazówki:
+
+    - Skorzystaj z funkcji pd.cut() do podziału danych na grupy wiekowe.
+    - Użyj groupby() i mean(), aby obliczyć średnie wartości dla każdej grupy wiekowej.
+
+6. Identyfikacja osób o wysokim ryzyku zdrowotnym
+  Zadanie: Zidentyfikuj osoby, które mają wskaźnik BMI powyżej 30, poziom cholesterolu powyżej 240 mg/dL oraz poziom glukozy powyżej 125 mg/dL.
+
+  Wskazówki:
+
+    - Stwórz filtr, który wybierze osoby spełniające te kryteria, i wyświetl liczbę osób o wysokim ryzyku zdrowotnym za pomocą len().
+
+7. Tworzenie wykresów
+  Zadanie: Stwórz różne wykresy wizualizujące dane zdrowotne, w tym histogram wieku, wykres pudełkowy dla wartości BMI oraz heatmapę korelacji wskaźników zdrowotnych.
+
+  Wskazówki:
+
+    - Użyj sns.histplot() do stworzenia histogramu wieku.
+    - Wykorzystaj sns.boxplot() do wizualizacji rozkładu BMI.
+    - Do obliczenia korelacji wskaźników zdrowotnych użyj corr() i wyświetl je na heatmapie za pomocą sns.heatmap().
+
+8. Analiza zaawansowana – macierz korelacji
+  Zadanie: Oblicz korelację między wiekiem, BMI, ciśnieniem krwi, poziomem cholesterolu i glukozy, a następnie stwórz heatmapę dla tych wskaźników.
+
+  Wskazówki:
+
+    - Użyj funkcji corr() do obliczenia korelacji między wskaźnikami.
+    - Stwórz wykres heatmapy przy użyciu sns.heatmap() i ustaw odpowiednią paletę kolorów.
+
+9. Analiza osób o wysokim ryzyku
+  Zadanie: Stwórz wykres punktowy (scatterplot) przedstawiający osoby o wysokim ryzyku zdrowotnym, gdzie oś X to poziom cholesterolu, a oś Y to poziom glukozy. Kolor punktów powinien reprezentować BMI.
+
+  Wskazówki:
+
+    - Użyj sns.scatterplot() do stworzenia wykresu, gdzie kolor punktów będzie odzwierciedlał BMI.
+
+10. Podsumowanie i wnioski
+  Zadanie: Na podstawie przeprowadzonych analiz sformułuj wnioski dotyczące związków między wskaźnikami zdrowotnymi, a także identyfikuj grupy osób najbardziej narażonych na problemy zdrowotne.
+
+  Wskazówki:
+
+    - Opracuj krótkie podsumowanie swoich wniosków, skupiając się na osobach o wysokim ryzyku zdrowotnym i zależnościach między wskaźnikami.
+    - Projekt ten pozwala uczestnikom na praktyczne wykorzystanie umiejętności z zakresu analizy danych, takich jak czyszczenie danych, grupowanie, tworzenie funkcji, obliczanie statystyk oraz wizualizacje danych.
