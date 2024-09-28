@@ -1,0 +1,24 @@
+Agenda Python w analizie danych
+
+Dzień pierwszy
+
+09:00-09:30 - Wstęp, powitanie sprawy organizacyjne
+09:30-10:00 - Podstawowe pojęcia statystyczne
+10:00-10:30 - Podstawowe miary rozkładu
+10:30-10:45 - Przerwa kawowa 15 minut
+11:00-11:30 - Warsztat ze statystyki
+11:30-12:30 - Python wybrane elementy
+12:30-13:30 - Warsztat z Python
+13:30-13:45 - Przerwa kawowa 15 minut
+13:45-15:00 - Warsztat z Python cd.
+15:00-15:30 - Omówienie warsztatu, zakończenie dnia
+
+Dzień drugi
+
+09:00-11:00 - Analiza z NumPy i Pandas
+11:00-11:15 - Przerwa kawowa 15 minut
+11:15-12:15 - Warsztat z Analizy
+12:15-13:15 - Wizualizacja
+13:15-13:30 - Przerwa kawowa 15 minut
+13:30-15:00 - Projekt końcowy
+15:00-15:30 - Omówienie projektu, zakończenie szkolenia (testy oraz ankiety)
