@@ -12,82 +12,74 @@ Cholesterol Level (mg/dL): Poziom cholesterolu we krwi.
 Blood Glucose Level (mg/dL): Poziom glukozy we krwi.
 Blood Pressure (s/d): Ciśnienie skurczowe i rozkurczowe.
 
-Kroki projektu:
-1. Wczytanie danych i wstępna analiza
-  Zadanie: Wczytaj dane z pliku CSV i przeanalizuj ich strukturę oraz podstawowe informacje.
+Krok 1: Przygotowanie środowiska pracy i wczytanie danych
+Co należy zrobić: Wczytaj dane z pliku CSV i przeanalizuj strukturę oraz podstawowe statystyki.
 
-  Wskazówki:
+Wskazówki:
+  - Wczytaj dane za pomocą pd.read_csv().
+  - Wyświetl informacje o strukturze danych przy użyciu df.info().
+  - Skorzystaj z df.describe() oraz df.head() do analizy podstawowych statystyk i przeglądu pierwszych wierszy.
 
-    - Użyj funkcji pd.read_csv() do wczytania danych.
-    - Wyświetl informacje o danych za pomocą df.info(), df.describe(), df.head().
+Krok 2: Czyszczenie danych
+Co należy zrobić: Zidentyfikuj brakujące wartości oraz duplikaty, a następnie uzupełnij brakujące dane i usuń duplikaty.
 
-2. Czyszczenie danych
-  Zadanie: Sprawdź, czy w danych występują brakujące wartości oraz duplikaty. Uzupełnij brakujące dane.
+Wskazówki:
+  - Sprawdź brakujące dane za pomocą df.isnull().sum().
+  - Uzupełnij brakujące wartości, np. średnią w kolumnie „Age (years)” za pomocą fillna().
+  - Sprawdź i usuń duplikaty za pomocą df.duplicated().sum() i df.drop_duplicates().
 
-  Wskazówki:
+Krok 3: Eksploracyjna analiza danych (EDA)
+Co należy zrobić: Przeprowadź analizę statystyk zmiennych oraz wizualizację rozkładu wieku i wartości odstających.
 
-    - Sprawdź brakujące wartości za pomocą df.isnull().sum().
-    - Uzupełnij brakujące dane, np. za pomocą średniej wartości, korzystając z funkcji fillna().
-    - Sprawdź, czy w danych występują duplikaty za pomocą df.duplicated().sum() i usuń je, jeśli to konieczne, za pomocą df.drop_duplicates().
+Wskazówki:
+  - Oblicz statystyki takie jak średnia, mediana, dominanta oraz odchylenie standardowe dla wieku przy użyciu funkcji mean(), median(), mode(), std().
+  - Wizualizuj rozkład wieku za pomocą sns.histplot() oraz zidentyfikuj wartości odstające przy użyciu sns.boxplot().
 
-3. Rozdzielenie i konwersja kolumn
-  Zadanie: Rozdziel kolumnę ciśnienia krwi na dwie osobne kolumny: ciśnienie skurczowe i rozkurczowe, a następnie przekonwertuj je na liczby.
+Krok 4: Zaawansowana analiza statystyczna
+Co należy zrobić: Oblicz kwartyle oraz rozstęp międzykwartylowy (IQR) dla zmiennej „Age (years)” oraz zidentyfikuj wartości odstające.
 
-  Wskazówki:
+Wskazówki:
+  - Oblicz IQR przy użyciu funkcji quantile() oraz zidentyfikuj wartości odstające za pomocą filtrów na danych (Q1 - 1.5 * IQR i Q3 + 1.5 * IQR).
+  - Skategoryzuj wiek na grupy wiekowe za pomocą pd.cut() i oblicz średnie dla każdej grupy.
 
-    - Użyj str.split('/', expand=True) do rozdzielenia kolumny Blood Pressure (s/d).
-    - Konwertuj nowe kolumny na liczby za pomocą pd.to_numeric().
+Krok 5: Tworzenie grup wiekowych i analiza
+Co należy zrobić: Podziel dane na grupy wiekowe i oblicz średnie wartości wskaźników zdrowotnych dla każdej grupy.
 
-4. Obliczanie statystyk
-  Zadanie: Oblicz podstawowe statystyki (średnia, mediana, minimum, maksimum, odchylenie standardowe) dla wskaźników zdrowotnych takich jak wiek, BMI, poziom cholesterolu i glukozy.
+Wskazówki:
+  - Podziel wiek na przedziały za pomocą pd.cut() i utwórz grupy wiekowe.
+  - Oblicz średnie wskaźniki zdrowotne dla każdej grupy przy użyciu groupby() i mean(), a wyniki przedstaw na wykresach.
 
-  Wskazówki:
+Krok 6: Analiza wskaźników zdrowotnych i kategoryzacja BMI
+Co należy zrobić: Skategoryzuj osoby według wskaźnika BMI na podstawie standardowych klasyfikacji (niedowaga, prawidłowa waga, nadwaga, otyłość).
 
-    - Użyj funkcji takich jak mean(), median(), min(), max() oraz std() dla poszczególnych kolumn, aby obliczyć te statystyki.
+Wskazówki:
+  - Użyj funkcji apply() i zdefiniowanej funkcji do klasyfikacji BMI.
+  - Wyświetl rozkład osób w każdej kategorii BMI za pomocą value_counts().
 
-5. Grupowanie danych i analiza
-  Zadanie: Podziel osoby na grupy wiekowe i oblicz średnie wartości wskaźników zdrowotnych dla każdej grupy.
+Krok 7: Analiza poziomu cholesterolu i glukozy
+Co należy zrobić: Zidentyfikuj osoby z wysokim poziomem cholesterolu (>240 mg/dL) oraz glukozy (>125 mg/dL) i wizualizuj wyniki.
 
-  Wskazówki:
+Wskazówki:
+  - Filtruj dane za pomocą df[df['Cholesterol Level (mg/dL)'] > 240] oraz df[df['Blood Glucose Level (mg/dL)'] > 125].
+  - Dodaj nowe kolumny z flagami dla osób z wysokimi poziomami cholesterolu i glukozy.
 
-    - Skorzystaj z funkcji pd.cut() do podziału danych na grupy wiekowe.
-    - Użyj groupby() i mean(), aby obliczyć średnie wartości dla każdej grupy wiekowej.
+Krok 8: Rozdzielenie ciśnienia krwi na skurczowe i rozkurczowe
+Co należy zrobić: Rozdziel kolumnę ciśnienia krwi na osobne kolumny dla ciśnienia skurczowego i rozkurczowego, a następnie przekształć je na liczby.
 
-6. Identyfikacja osób o wysokim ryzyku zdrowotnym
-  Zadanie: Zidentyfikuj osoby, które mają wskaźnik BMI powyżej 30, poziom cholesterolu powyżej 240 mg/dL oraz poziom glukozy powyżej 125 mg/dL.
+Wskazówki:
+  - Użyj str.split('/', expand=True) do rozdzielenia kolumny „Blood Pressure (s/d)”.
+  - Przekonwertuj nowe kolumny na typ numeryczny za pomocą pd.to_numeric().
 
-  Wskazówki:
+Krok 9: Analiza korelacji wskaźników zdrowotnych
+Co należy zrobić: Oblicz macierz korelacji pomiędzy wiekiem, cholesterolem, glukozą, BMI i ciśnieniem krwi oraz wizualizuj wyniki na heatmapie.
 
-    - Stwórz filtr, który wybierze osoby spełniające te kryteria, i wyświetl liczbę osób o wysokim ryzyku zdrowotnym za pomocą len().
+Wskazówki:
+  - Użyj funkcji corr() do obliczenia korelacji.
+  - Stwórz heatmapę korelacji za pomocą sns.heatmap().
 
-7. Tworzenie wykresów
-  Zadanie: Stwórz różne wykresy wizualizujące dane zdrowotne, w tym histogram wieku, wykres pudełkowy dla wartości BMI oraz heatmapę korelacji wskaźników zdrowotnych.
+Krok 10: Identyfikacja osób o wysokim ryzyku zdrowotnym
+Co należy zrobić: Zidentyfikuj osoby o wysokim ryzyku zdrowotnym (BMI > 30, cholesterol > 240 mg/dL, glukoza > 125 mg/dL) oraz zwizualizuj te osoby na wykresie punktowym.
 
-  Wskazówki:
-
-    - Użyj sns.histplot() do stworzenia histogramu wieku.
-    - Wykorzystaj sns.boxplot() do wizualizacji rozkładu BMI.
-    - Do obliczenia korelacji wskaźników zdrowotnych użyj corr() i wyświetl je na heatmapie za pomocą sns.heatmap().
-
-8. Analiza zaawansowana – macierz korelacji
-  Zadanie: Oblicz korelację między wiekiem, BMI, ciśnieniem krwi, poziomem cholesterolu i glukozy, a następnie stwórz heatmapę dla tych wskaźników.
-
-  Wskazówki:
-
-    - Użyj funkcji corr() do obliczenia korelacji między wskaźnikami.
-    - Stwórz wykres heatmapy przy użyciu sns.heatmap() i ustaw odpowiednią paletę kolorów.
-
-9. Analiza osób o wysokim ryzyku
-  Zadanie: Stwórz wykres punktowy (scatterplot) przedstawiający osoby o wysokim ryzyku zdrowotnym, gdzie oś X to poziom cholesterolu, a oś Y to poziom glukozy. Kolor punktów powinien reprezentować BMI.
-
-  Wskazówki:
-
-    - Użyj sns.scatterplot() do stworzenia wykresu, gdzie kolor punktów będzie odzwierciedlał BMI.
-
-10. Podsumowanie i wnioski
-  Zadanie: Na podstawie przeprowadzonych analiz sformułuj wnioski dotyczące związków między wskaźnikami zdrowotnymi, a także identyfikuj grupy osób najbardziej narażonych na problemy zdrowotne.
-
-  Wskazówki:
-
-    - Opracuj krótkie podsumowanie swoich wniosków, skupiając się na osobach o wysokim ryzyku zdrowotnym i zależnościach między wskaźnikami.
-    - Projekt ten pozwala uczestnikom na praktyczne wykorzystanie umiejętności z zakresu analizy danych, takich jak czyszczenie danych, grupowanie, tworzenie funkcji, obliczanie statystyk oraz wizualizacje danych.
+Wskazówki:
+  - Stwórz filtr oparty na wskaźnikach zdrowotnych i zidentyfikuj osoby o wysokim ryzyku.
+  - Wizualizuj osoby o wysokim ryzyku za pomocą sns.scatterplot(), gdzie oś X reprezentuje poziom cholesterolu, a oś Y poziom glukozy.
