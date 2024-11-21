@@ -18,9 +18,9 @@ Dzień drugi
 
 09:00-11:00 - Analiza z NumPy i Pandas
 11:00-11:20 - Przerwa kawowa / śniadaniowa 20 minut
-11:15-12:15 - Warsztat z Analizy
-12:15-13:15 - Wizualizacja danych
-13:15-13:30 - Przerwa kawowa 15 minut
-13:30-14:00 - Warsztat - analiza pliku
+11:20-12:00 - Wizualizacja danych
+12:00-13:00 - Warsztat z Analizy - analiza pliku
+13:00-13:15 - Przerwa kawowa 15 minut
+13:15-14:00 - Warsztat z Analizy- analiza pliku cd
 14:00-15:00 - Projekt końcowy
 15:00-15:30 - Omówienie projektu, zakończenie szkolenia (testy oraz ankiety)
