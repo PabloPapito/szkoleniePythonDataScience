@@ -16,11 +16,13 @@ Dzień pierwszy
 
 Dzień drugi
 
-09:00-11:00 - Analiza z NumPy i Pandas
+09:00-09:30 - Wstęp do analizy danych, historia
+09:30-10:00 - Analiza z NumPy wstęp do Pandas
+10:00-11:00 - Wczytywanie pliku, podstawowe operacje na danych
 11:00-11:20 - Przerwa kawowa / śniadaniowa 20 minut
-11:20-12:00 - Wizualizacja danych
-12:00-13:00 - Warsztat z Analizy - analiza pliku
+11:20-12:00 - Analiza pliku
+12:00-13:00 - Wizualizacja danych
 13:00-13:15 - Przerwa kawowa 15 minut
-13:15-14:00 - Warsztat z Analizy- analiza pliku cd
+13:15-14:00 - Warsztat z Analizy - analiza pliku cd wstęp do projektu
 14:00-15:00 - Projekt końcowy
 15:00-15:30 - Omówienie projektu, zakończenie szkolenia (testy oraz ankiety)
