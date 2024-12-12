@@ -2,27 +2,29 @@ Agenda Python w analizie danych
 
 Dzień pierwszy
 
-09:00-09:30 - Wstęp, powitanie sprawy organizacyjne
-09:30-10:00 - JupyterNotebook
-10:00-11:00 - Podstawowe pojęcia statystyczne + Podstawowe miary rozkładu
-11:00-11:20 - Przerwa kawowo/śniadaniowa 20 minut
-11:20-12:00 - Python wybrane elementy
-12:00-12:30 - Warsztat z Python
-12:30-13:00 - Python wybrane elementy cd.
-13:00-13:45 - Warsztat z Python cd.
-13:45-14:00 - Przerwa kawowa 15 minut
-14:00-15:00 - Warsztat z Python cd. samodzielne ćwiczena
-15:00-15:30 - Omówienie warsztatu, zakończenie dnia
+09:00-10:00 - Wstęp, powitanie sprawy organizacyjne, JupyterNotebook
+10:00-10:10 - PRZERWA 10 MIN
+10:10-11:10 - Podstawowe pojęcia statystyczne + Podstawowe miary rozkładu
+11:20-11:30 - PRZERWA 10 MIN
+11:30-12:30 - Python - podstawy
+12:30-12:40 - PRZERWA 10 MIN
+12:40-13:40 - Python - podstawy cd.
+13:40-13:50 - PRZERWA 10 MIN
+13:50-14:50 - Python - podstawy cd.
+14:50-15:00 - PRZERWA 10 MIN
+15:00-16:00 - Python - podstawy cd.
+
 
 Dzień drugi
 
-09:00-09:30 - Wstęp do analizy danych, historia
-09:30-10:00 - Analiza z NumPy wstęp do Pandas
-10:00-11:00 - Wczytywanie pliku, podstawowe operacje na danych
-11:00-11:20 - Przerwa kawowa / śniadaniowa 20 minut
-11:20-12:00 - Analiza pliku
-12:00-13:00 - Wizualizacja danych
-13:00-13:15 - Przerwa kawowa 15 minut
-13:15-14:00 - Warsztat z Analizy - analiza pliku cd wstęp do projektu
-14:00-15:00 - Projekt końcowy
-15:00-15:30 - Omówienie projektu, zakończenie szkolenia (testy oraz ankiety)
+09:00-10:00 - Wstęp do analizy danych, Analiza z NumPy
+10:00-10:10 - PRZERWA 10 MIN
+10:10-11:10 - Wstęp do Pandas
+11:10-12:10 - Analiza pliku z Pandas - Wczytywanie pliku, podstawowe operacje na danych
+12:10-12:20 - PRZERWA 10 MIN
+12:20-13:20 - Analiza pliku z Pandas - Sortowanie oraz filtrowanie danych
+13:20-13:30 - PRZERWA 10 MIN
+13:30-14:30 - Analiza pliku z Pandas - Tabele przestawne, grupowanie, wizualizacja danych
+14:30-14:40 - PRZERWA 10 MIN
+14:40-15:40 - Projekt końcowy
+15:40-16:00 - Zakończenie szkolenia
