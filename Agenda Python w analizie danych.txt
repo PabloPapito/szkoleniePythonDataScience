@@ -20,11 +20,12 @@ Dzień drugi
 09:00-10:00 - Wstęp do analizy danych, Analiza z NumPy
 10:00-10:10 - PRZERWA 10 MIN
 10:10-11:10 - Wstęp do Pandas
-11:10-12:10 - Analiza pliku z Pandas - Wczytywanie pliku, podstawowe operacje na danych
-12:10-12:20 - PRZERWA 10 MIN
-12:20-13:20 - Analiza pliku z Pandas - Sortowanie oraz filtrowanie danych
-13:20-13:30 - PRZERWA 10 MIN
-13:30-14:30 - Analiza pliku z Pandas - Tabele przestawne, grupowanie, wizualizacja danych
-14:30-14:40 - PRZERWA 10 MIN
-14:40-15:40 - Projekt końcowy
-15:40-16:00 - Zakończenie szkolenia
+11:10-11:20 - PRZERWA 10 MIN
+11:20-12:20 - Analiza pliku z Pandas - Wczytywanie pliku, podstawowe operacje na danych
+12:20-12:30 - PRZERWA 10 MIN
+12:30-13:30 - Analiza pliku z Pandas - Sortowanie oraz filtrowanie danych
+13:30-13:40 - PRZERWA 10 MIN
+13:40-14:40 - Analiza pliku z Pandas - Tabele przestawne, grupowanie, wizualizacja danych
+14:40-14:50 - PRZERWA 10 MIN
+14:50-15:50 - Projekt końcowy
+15:50-16:00 - Zakończenie szkolenia, przekazanie testów oraz ankiet
